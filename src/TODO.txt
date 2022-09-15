@@ -1,0 +1,20 @@
+What if in Player.bet(int bet) the player doesnt have enough chips??
+Should the dealer burn cards?
+What is the minimum bet?
+Need to enforce player order
+If a player disconnects they fold
+If the Server closes, what do we do??
+    Make a ServerClosedException
+        Unexpected vs Expected???
+
+The network.Client can either
+1) Start a network.Server
+    1.1) Connect to said network.Server (GOTO 2)
+2) Connect to a network.Server
+    2.1) Register as player
+        2.1.1) If is host, can start the game
+    2.2) Signal ready
+    2.3) Play
+    2.4) GOTO 2.2
+    2.5) Leave
+        2.5.1) If is host, ends the game (work on transferring)
